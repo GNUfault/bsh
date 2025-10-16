@@ -45,7 +45,6 @@ int main() {
         if (!fgets(line, sizeof(line), stdin)) break;
         line[strcspn(line, "\n")] = 0;
 
-
         line[strcspn(line, "\n")] = 0;
         if (!*line) continue;
 
@@ -61,7 +60,7 @@ int main() {
         }
 
         if (!strcmp(a[0], "help")) {
-            puts("bsh - Barebones Shell by Connor Thomson");
+            puts("bsh - Basic Shell by Connor Thomson");
             puts(" Built in commands:");
             puts("  cd - Change directory");
             puts("  help - Get help with bsh");
