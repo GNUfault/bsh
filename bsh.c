@@ -41,7 +41,11 @@ int main() {
             fflush(stdout);
         }
 
-        if (getline(&line, &len, stdin) < 0) break;
+        char line[1024];
+        if (!fgets(line, sizeof(line), stdin)) break;
+        line[strcspn(line, "\n")] = 0;
+
+
         line[strcspn(line, "\n")] = 0;
         if (!*line) continue;
 
